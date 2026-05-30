@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CodeHound — Privacy Policy</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      max-width: 700px;
+      margin: 60px auto;
+      padding: 0 24px;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
+    h1 { font-size: 28px; margin-bottom: 4px; }
+    h2 { font-size: 18px; margin-top: 32px; margin-bottom: 8px; }
+    .meta { color: #888; font-size: 14px; margin-bottom: 32px; }
+    p { margin-bottom: 12px; color: #333; }
+    a { color: #d97706; }
+  </style>
+</head>
+<body>
+  <h1>CodeHound — Privacy Policy</h1>
+  <p class="meta">Last updated: May 30, 2026</p>
+
+  <p>CodeHound is a Chrome extension that retrieves verification codes from your Gmail inbox and copies them to your clipboard. Your privacy is important to us. This policy explains what data is accessed and how it is used.</p>
+
+  <h2>Data We Access</h2>
+  <p>CodeHound requests read-only access to your Gmail account via Google OAuth2. This access is used solely to search for and retrieve verification code emails. We do not store, transmit, or share any email content.</p>
+
+  <h2>Data We Store</h2>
+  <p>CodeHound stores the following data locally on your device using Chrome's built-in storage API:</p>
+  <ul style="margin: 0 0 12px 20px; color: #333;">
+    <li>Your optional custom Gmail search query</li>
+    <li>Your AI provider preference (Claude or OpenAI), if enabled</li>
+    <li>Your AI API key, if provided</li>
+  </ul>
+  <p>None of this data ever leaves your device except to communicate directly with the selected AI provider when AI-assisted mode is active.</p>
+
+  <h2>AI-Assisted Mode</h2>
+  <p>If you enable AI-assisted email selection, CodeHound will send the subject lines (not the full content) of recent matching emails to the AI provider you select (Anthropic or OpenAI). Your API key is stored locally and sent only to the respective provider. We do not have access to your API key or any data sent to AI providers.</p>
+
+  <h2>Google OAuth Scopes</h2>
+  <p>CodeHound requests the <code>gmail.readonly</code> scope, which allows read-only access to your Gmail messages. The extension never modifies, deletes, or sends emails on your behalf.</p>
+
+  <h2>Third-Party Services</h2>
+  <p>CodeHound communicates with the following third-party services:</p>
+  <ul style="margin: 0 0 12px 20px; color: #333;">
+    <li>Google Gmail API — to search and read emails</li>
+    <li>Anthropic API — only if Claude is selected as the AI provider</li>
+    <li>OpenAI API — only if OpenAI is selected as the AI provider</li>
+  </ul>
+
+  <h2>Contact</h2>
+  <p>If you have any questions about this privacy policy, please open an issue on the <a href="https://github.com/Gardner-Programs/CodeHound">CodeHound GitHub repository</a>.</p>
+
+  <p style="margin-top: 40px; font-size: 13px; color: #aaa;">
+    <a href="index.html">← Back to Gardner Programs</a>
+  </p>
+</body>
+</html>
