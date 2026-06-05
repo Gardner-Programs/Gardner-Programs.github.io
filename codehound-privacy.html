@@ -22,7 +22,7 @@
 </head>
 <body>
   <h1>CodeHound — Privacy Policy</h1>
-  <p class="meta">Last updated: May 30, 2026</p>
+  <p class="meta">Last updated: June 5, 2026</p>
 
   <p>CodeHound is a Chrome extension that retrieves verification codes from your Gmail inbox and copies them to your clipboard. Your privacy is important to us. This policy explains what data is accessed and how it is used.</p>
 
@@ -51,6 +51,25 @@
     <li>Anthropic API — only if Claude is selected as the AI provider</li>
     <li>OpenAI API — only if OpenAI is selected as the AI provider</li>
   </ul>
+
+  <h2>Data Protection</h2>
+  <p>CodeHound takes the following measures to protect sensitive data:</p>
+  <ul style="margin: 0 0 12px 20px; color: #333;">
+    <li><strong>OAuth tokens (Chrome):</strong> Chrome manages and caches the OAuth token through its built-in Identity API. CodeHound receives the token from Chrome and uses it to call the Gmail API; Chrome is responsible for its secure storage. You can revoke access and clear the cached token at any time via Google Account Permissions or the extension's sign-out button.</li>
+    <li><strong>OAuth tokens (Firefox):</strong> Firefox does not cache OAuth tokens on the extension's behalf. Each session, CodeHound initiates a web auth flow via <code>browser.identity.launchWebAuthFlow</code> and receives a short-lived access token that is held in memory only for the duration of that session. The token is never written to disk or extension storage and is discarded when the popup closes.</li>
+    <li><strong>API keys</strong> (Anthropic or OpenAI) are stored locally in the browser's extension storage, which is sandboxed to CodeHound and inaccessible to other extensions or web pages.</li>
+    <li>All communication with Google's APIs and AI providers uses HTTPS (TLS-encrypted transport).</li>
+    <li>No sensitive data is written to disk outside of the browser's own secure storage mechanisms.</li>
+  </ul>
+
+  <h2>Data Retention and Deletion of Google User Data</h2>
+  <p>CodeHound does not retain any Google user data beyond the duration of a single use session:</p>
+  <ul style="margin: 0 0 12px 20px; color: #333;">
+    <li>Email content and verification codes retrieved from Gmail are held in memory only for the duration of the active popup session and are never written to disk or transmitted to any server.</li>
+    <li>No Gmail messages, metadata, or personal information derived from Google APIs are stored persistently by CodeHound.</li>
+  </ul>
+  <p><strong>To delete locally stored extension data</strong> (your search query preference, AI provider choice, and API key), you can either remove the extension or clear its storage through your browser's extension management page.</p>
+  <p><strong>To revoke CodeHound's access to your Google account</strong>, visit <a href="https://myaccount.google.com/permissions">Google Account Permissions</a>, find CodeHound in the list of connected apps, and click "Remove Access." This immediately invalidates the OAuth token the browser holds on the extension's behalf.</p>
 
   <h2>Contact</h2>
   <p>If you have any questions about this privacy policy, please open an issue on the <a href="https://github.com/Gardner-Programs/CodeHound">CodeHound GitHub repository</a>.</p>
